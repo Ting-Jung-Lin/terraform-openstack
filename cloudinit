@@ -1,0 +1,13 @@
+#cloud-config
+users:
+  - default  
+  - name: ops
+    plain_text_passwd: 'open'  
+    home: /home/ops
+    shell: /bin/bash
+    lock_passwd: false 
+    gecos: Ubuntu 
+    groups: [sudo, lsa, op]
+    primary-group: ops
+    sudo: ['ALL=(ALL) NOPASSWD:ALL'] 
+ssh_pwauth: True 
